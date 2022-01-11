@@ -3,19 +3,19 @@
 		"id": "home"
 		,"menu": "Home"
 		,"title": "Bill Perry Law"
-		,"subtitle": "Arbitrator – Mediator - Legal Adviser – Counsellor at Law"
+		,"subtitle": "Arbitrator - Mediator - Legal Adviser - Counsellor at Law"
 		,"file": "home.html"
 	}
 	,{
 		"id": "mediation"
-		,"menu": "Mediation – Arbitration – A D R"
-		,"title": "Mediation – Arbitration – A D R"
+		,"menu": "Mediation - Arbitration - A D R"
+		,"title": "Mediation - Arbitration - A D R"
 		,"file": "mediation.html"
 	}
 	,{
 		"id": "advisor"
-		,"menu": "Legal Adviser – Counsellor at Law"
-		,"title": "Legal Adviser – Counsellor at Law"
+		,"menu": "Legal Adviser - Counsellor at Law"
+		,"title": "Legal Adviser - Counsellor at Law"
 		,"file": "advisor.html"
 	}
 	,{

@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: layouts/default.html
 ---
 
-{% for page in site.data.pages %}
+{% for page in pages %}
 	<section id="{{ page.id }}" class="container g-py-100 {% cycle '', 'g-bg-secondary' %}">
 		<div class="text-center g-mb-50">
 			<h2 class="h1 g-color-passport-blue g-font-weight-400">{{ page.title }}</h2>
@@ -10,7 +10,7 @@ layout: default
 		</div>
 
 		<div class="row no-gutters g-mx-minus-10">
-			{% include pages/{{ page.file }} %}
+			{% include "pages/{{ page.file }}" %}
 		</div>
 	</section>
 {% endfor %}

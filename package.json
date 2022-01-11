@@ -1,0 +1,26 @@
+{
+  "name": "billperrylaw.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./_site && npm run build:eleventy",
+    "build:eleventy": "npx @11ty/eleventy --input ./src/",
+    "dev": "rm -rf ./_site && npm run dev:eleventy",
+    "dev:eleventy": "npx @11ty/eleventy --input ./src/ --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://richardherbert@github.com/billperrylaw/billperrylaw.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billperrylaw/billperrylaw.com/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "dotenv": "^11.0.0"
+  }
+}
