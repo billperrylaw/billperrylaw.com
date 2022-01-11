@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+	<title>{% if title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -62,7 +62,7 @@
 								<ul class="navbar-nav ml-auto text-uppercase g-font-weight-600 u-sub-menu-v1">
 									{% for page in pages %}
 										<li class="nav-item g-my-5">
-											<a href="/#{{ id }}" class="nav-link">{{ menu }}</a>
+											<a href="/#{{ page.id }}" class="nav-link">{{ page.menu }}</a>
 										</li>
 									{% endfor %}
 								</ul>
@@ -72,6 +72,10 @@
 				</div>
 			</div>
 		</div>
+
+
+
+{{ title | dump }}
 
 		{{ content }}
 
