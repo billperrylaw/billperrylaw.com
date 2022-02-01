@@ -4,7 +4,7 @@ let baseURL = 'https://www.billperrylaw.com/';
 
 switch ( process.env.ELEVENTY_ENV ) {
 	case 'development':
-		baseURL = 'http://localhost:8080/';
+		baseURL = '/';
 	break;
 
 	default:
