@@ -22,4 +22,4 @@ jobs:
           server-dir: ./public_html/
           state-name: ../.ftp-deploy-sync-state.json
           log-level: verbose
-          dry-run: true
+          dry-run: false
