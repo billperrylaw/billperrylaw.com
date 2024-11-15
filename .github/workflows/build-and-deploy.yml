@@ -1,25 +1,36 @@
 name: Build and Deploy
-on: [push]
+
+on:
+  push:
+    branches: ['pages2']
 
 jobs:
-  build_deploy:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@master
-      - name: Build
-        uses: TartanLlama/actions-eleventy@v1.3
-        with:
-          args: --input ./src/
-          install_dependencies: true
+  build:
+    runs-on: ubuntu-latest
 
-      - name: Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+    strategy:
+      matrix:
+        node-version: ['20']
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
-          server: ${{ secrets.FTP_CONNECTION }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./_site/
-          server-dir: ./public_html/
-          state-name: ../.ftp-deploy-sync-state.json
-          log-level: verbose
-          dry-run: false
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run npm build
+        run: npm run build:prod
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
