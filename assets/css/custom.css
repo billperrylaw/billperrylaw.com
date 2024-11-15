@@ -1,0 +1,28 @@
+.h1 {
+	font-family: Copperplate, "Copperplate Gothic Light", "Libre Baskerville";
+	font-size: 45px;
+}
+
+.g-color-passport-blue {
+	color: #0C3C74;
+}
+
+.u-go-to-v1:hover, .u-go-to-v1:focus:hover {
+	text-decoration: none;
+	color: #fff;
+	background-color: #0C3C74;
+}
+
+a {
+	color: #0C3C74;
+	outline: none;
+}
+
+a:focus, a:hover {
+	color: #0C3C74;
+}
+
+::selection {
+	color: #fff;
+	background-color: #0C3C74;
+}
