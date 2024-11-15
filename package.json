@@ -6,9 +6,8 @@
   "scripts": {
     "build": "rm -rf ./_site && npm run build:eleventy",
     "build:eleventy": "npx @11ty/eleventy --input ./src/",
-    "dev": "rm -rf ./_site && npm run dev:eleventy",
+    "dev": "rm -rf ./_site && npm run dev:eleventy -- --pathprefix=/",
     "dev:eleventy": "npx @11ty/eleventy --input ./src/ --serve",
-
     "build:eleventy:prod": "ELEVENTY_ENV=production npx @11ty/eleventy --input=./src/",
     "build:prod": "npm run build:eleventy:prod -- --pathprefix=/billperrylaw.com/"
   },
@@ -23,7 +22,7 @@
     "url": "https://github.com/billperrylaw/billperrylaw.com/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "dotenv": "^11.0.0"
+    "dotenv": "^11.0.0",
+    "@11ty/eleventy": "^2.0.1"
   }
 }
