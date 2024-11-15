@@ -1,9 +1,13 @@
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function( eleventyConfig ) {
 	eleventyConfig.setTemplateFormats( 'html,md,liquid' );
 	eleventyConfig.setQuietMode( true );
 
 	eleventyConfig.addPassthroughCopy( './src/assets/' );
 	eleventyConfig.addPassthroughCopy( './src/robots.txt' );
+
+	eleventyConfig.addPlugin( EleventyHtmlBasePlugin );
 
 	eleventyConfig.addShortcode( 'year', () => `${ new Date().getFullYear() }`);
 
@@ -17,8 +21,4 @@ module.exports = function( eleventyConfig ) {
 		,ghostMode: false
 		,logLevel: 'silent'
 	} );
-
-	return {
-		pathPrefix: "/billperrylaw.com/"
-	}
 };
