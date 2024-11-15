@@ -9,7 +9,7 @@
     "dev": "rm -rf ./_site && npm run dev:eleventy -- --pathprefix=/",
     "dev:eleventy": "npx @11ty/eleventy --input ./src/ --serve",
     "build:eleventy:prod": "ELEVENTY_ENV=production npx @11ty/eleventy --input=./src/",
-    "build:prod": "npm run build:eleventy:prod"
+    "build:prod": "npm run build:eleventy:prod -- --pathprefix=/billperrylaw.com/"
   },
   "repository": {
     "type": "git",
