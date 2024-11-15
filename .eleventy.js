@@ -17,4 +17,8 @@ module.exports = function( eleventyConfig ) {
 		,ghostMode: false
 		,logLevel: 'silent'
 	} );
+
+	return {
+		pathPrefix: "/billperrylaw.com/"
+	}
 };
