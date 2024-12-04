@@ -20,7 +20,9 @@
     "url": "https://github.com/billperrylaw/billperrylaw.com/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
     "dotenv": "^11.0.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
   }
 }
